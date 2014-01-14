@@ -26,3 +26,5 @@ public class Task4
     }
 }
         
+        // When formatting height in printf statement, why specify floating point number (f) when already double?
+        //how to add "metres heigh" to end of value?
