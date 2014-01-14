@@ -1,0 +1,49 @@
+Lab01/2014
+
+Task1
+
+1a)	
+Remove " at start of string.  Compile:  ')' expected
+Remove " at start of string.  Compile: unclosed string literal
+Replace println with bogus: cannot find symbol - method bogus(java.lang.String)
+Remove semicolon from print statement: ";" expected.
+Replace main with man: Class task1.Task1 does not have main method.
+Remove last brace: Reach end of file while parsing.
+
+Task2
+
+Compilation Run -time errors 
+1.	Must import Scanner (import java.util.Scanner;)
+2.	Scanner in = new Scanner(System.in);	  //quotation marks compile error
+3.	x = in.readInt()	 // in.nextInt() proper method.  ReadInt is not a standard java method (although 		we could          develop it.
+4.	y = in.readInt()	 // in.nextInt() proper method.  ReadInt is not a standard java method.
+5.	System.out.print("Please enter an integer: ")  // ; expected.
+
+Logical errors
+1.	Initial x and y values are redundant
+2.	second read input replaces x instead of providing value for y, therefore sum will be x plus zero.
+3.	System.out.println("The sum is " + x + y) //predcedence dictates that the statement will read left to right where       "The sum is " will be addended to the value of x before being addended to the value of y = 0.
+
+    example if x=5
+    The sum is 50
+
+    Therefore, bracket addition to force precidence. i.e.
+
+    System.out.println("The sum is " + (x + y))
+
+    •	Also, I would not constrauct a scanner called 'in' as in is used in other methods throughout the class.  I would        call it 'scan' (default) or 'sumScan' perhaps.
+    •	Finally, I would change x and y variables to doubles and alter the instruction lines to ask for doubles instead of       integers to account for decimals.
+
+Task3
+
+System.out.println("Output is: "+c+", "+ x* (z/y));
+
+Output is: 0.048, 0 
+
+The zero occurs due to integer division, which excludes any decimals that may remain.  For example, 
+y = 32
+z = 24
+z/y = 24/32 = 0.75
+as z and y are integers, all that it returned is 0.
+
+Therefore, x*(z/y) = 24*(0) = 0
