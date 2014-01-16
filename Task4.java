@@ -1,3 +1,10 @@
+/**
+ * Takes user input angle (degrees) and  distance  (metres)  and  calculates  height  of  building  
+ * 
+ * @author (Chris Hewitson) 
+ * @version (15/01/2014 ver. 1.00)
+ */
+
 import java.util.Scanner;
 
 public class Task4 
@@ -22,9 +29,8 @@ public class Task4
         tan = Math.tan(angleRadians);
         height =tan* distance;
         
-        System.out.printf("The height of the building is: " +"%.2f",height);               
+        System.out.printf("The height of the building is: " +"%.2f" + " metres", height);              
     }
 }
         
-        // When formatting height in printf statement, why specify floating point number (f) when already double?
-        //how to add "metres heigh" to end of value?
+      
