@@ -2,7 +2,7 @@ public class Task1
 {
     public static void main (String[] args)
     {
-        System.out.println("My name is: Chris \n" +                         \\Why have println here and not just print?
+        System.out.println("My name is: Chris \n" +                         
         "My course is COMP1102 \n" +
         "One of my favourite movie quotes is \n \t" +
         "\"I'm Dr. Horrible. I have a Ph.D in Horrible-ness\" \n \t \t" +
