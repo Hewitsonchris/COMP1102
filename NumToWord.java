@@ -1,6 +1,6 @@
 public class NumToWord
 {
-        public static String numToWord(Integer num)
+        public static String TransformToText(Integer num)
         {
             final  String[] units = { "Zero", "One", "Two", "Three",
                "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven",
@@ -17,22 +17,22 @@ public class NumToWord
 
                    if (num < 100)
                    {
-                   return tens[num / 10] + ((num % 10 > 0) ? " " + numToWord(num % 10) : "");
+                   return tens[num / 10] + ((num % 10 > 0) ? " " + TransformToText(num % 10) : "");
                    }
 
                    if (num < 1000)
                    {
                    return units[num / 100] + " Hundred"
-                           + ((num % 100 > 0) ? " and " + numToWord(num % 100) : "");
+                           + ((num % 100 > 0) ? " and " + TransformToText(num % 100) : "");
                    }
 
                    if (num < 1000000)
                    {
-                   return numToWord(num / 1000) + " Thousand "
-                           + ((num % 1000 > 0) ? " " + numToWord(num % 1000) : "");
+                   return TransformToText(num / 1000) + " Thousand "
+                           + ((num % 1000 > 0) ? " " + TransformToText(num % 1000) : "");
                    }
 
-           return numToWord(num/ 1000000) + " Million "+ ((num % 1000000 > 0) ? " " + numToWord(num % 1000000) : "");
+           return TransformToText(num/ 1000000) + " Million "+ ((num % 1000000 > 0) ? " " + TransformToText(num % 1000000) : "");
         }  
     
 }
