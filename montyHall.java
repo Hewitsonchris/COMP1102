@@ -28,8 +28,8 @@ public class MontyHall
             }
            
         }
-    System.out.println("Switching wins " + switchWins + " times.");
-    System.out.println("Staying wins " + stayWins + " times.");
-}
+        System.out.println("Switching wins " + switchWins + " times.");
+        System.out.println("Staying wins " + stayWins + " times.");
+    }
     
 }
