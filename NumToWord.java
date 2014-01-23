@@ -17,7 +17,9 @@ public class NumToWord
 
                    if (num < 100)
                    {
-                   return tens[num / 10] + ((num % 10 > 0) ? " " + TransformToText(num % 10) : "");
+                   return tens[num / 10] + ((num % 10 > 0) ? " " + TransformToText(num % 10) : ""); 
+                   
+                   // impliment ? as alternate ternery operator to if else. 
                    }
 
                    if (num < 1000)
