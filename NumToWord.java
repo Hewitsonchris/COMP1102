@@ -1,14 +1,17 @@
 public class NumToWord
 {
-        public static String TransformToText(Integer num)
-        {
-            final  String[] units = { "Zero", "One", "Two", "Three",
+        
+        
+       static String[] units = { "Zero", "One", "Two", "Three",
                "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven",
                "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen",
                "Seventeen", "Eighteen", "Nineteen"};
 
-            final   String[] tens = { "", "", "Twenty", "Thirty", "Forty",
+       static String[] tens = { "", "", "Twenty", "Thirty", "Forty",
                "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+               
+        static String TransformToText(Integer num)
+               {
 
                    if (num < 20)
                    {
@@ -17,9 +20,7 @@ public class NumToWord
 
                    if (num < 100)
                    {
-                   return tens[num / 10] + ((num % 10 > 0) ? " " + TransformToText(num % 10) : ""); 
-                   
-                   // impliment ? as alternate ternery operator to if else. 
+                   return tens[num / 10] + ((num % 10 > 0) ? " " + TransformToText(num % 10) : "");
                    }
 
                    if (num < 1000)
@@ -38,3 +39,5 @@ public class NumToWord
         }  
     
 }
+
+
