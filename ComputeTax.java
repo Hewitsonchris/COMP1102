@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-public class Tax1
+public class ComputeTax
 {
    public static void main(String[] args)
    {
