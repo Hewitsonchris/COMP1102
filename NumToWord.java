@@ -7,6 +7,7 @@ public class NumToWord
      Scanner scan = new Scanner(System.in);
      System.out.println("Enter an integar between 0 and 999999999: ");
      int num = scan.nextInt();
+     
      do
      {
          System.out.println("You entered a negative number.");
@@ -14,8 +15,7 @@ public class NumToWord
          num = scan.nextInt();
      }
      while (num <0);
-    
-     
+
      do
      {
          System.out.println("The number you entered was too high");
