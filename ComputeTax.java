@@ -11,7 +11,7 @@ public class ComputeTax
 
       String   status;
       double income;
-      double tax;
+      double tax = 0;
  
       DecimalFormat fmt = new DecimalFormat("$0.00");
       Scanner scan = new Scanner(System.in); 
@@ -23,16 +23,21 @@ public class ComputeTax
       
       if (status.equals("s") || status.equals("S"))
       {  
-         if (income > 0 && income <=8000)
+         if (income <= 0)
+            System.out.println("Invalid income");
+         else if (income <=8000)
             tax = RATE_LOW * income;
          else if (income <= 32000)
             tax = (RATE_MIDDLE * income)  + 800;               
          else
             tax = (RATE_HIGH * income) + 4400;
       }
+      
       else
       {  
-         if (income > 0 && income <=16000)
+          if (income <= 0)
+            System.out.println("Invalid income");
+         else if (income <=16000)
             tax = RATE_LOW * income;
          else if ( income <= 64000 )
             tax = (RATE_MIDDLE * income) + 1600;
