@@ -31,6 +31,7 @@ public class NumToWord
                
     static String[] tens = { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
                
+               
     static String TransformToText(int num)
     {
         if (num >= 0 && num < 20)
