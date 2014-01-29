@@ -15,7 +15,7 @@ public class NumToWord
          num = scan.nextInt();
      }
 
-     while (num > 1000000)
+     while (num > 1000000000)
      {
          System.out.println("The number you entered was too high");
          System.out.println("Try again, enter an integar between 0 and 999999999: ");
@@ -30,7 +30,6 @@ public class NumToWord
     static String[] units = { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven","Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
                
     static String[] tens = { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
-               
                
     static String TransformToText(int num)
     {
@@ -55,7 +54,7 @@ public class NumToWord
             
         }
         
-        if (num < 1000000)
+        if (num < 1000000000)
         {
             return TransformMillionsToText(num);
         }
