@@ -8,21 +8,20 @@ public class NumToWord
      System.out.println("Enter an integar between 0 and 999999999: ");
      int num = scan.nextInt();
      
-     do
+     while (num < 0)
      {
          System.out.println("You entered a negative number.");
          System.out.println("Try again, enter an integar between 0 and 999999999: ");
          num = scan.nextInt();
      }
-     while (num <0);
 
-     do
+     while (num > 1000000)
      {
          System.out.println("The number you entered was too high");
          System.out.println("Try again, enter an integar between 0 and 999999999: ");
          num = scan.nextInt();
      }
-     while (num > 1000000);
+   
      
      System.out.println(TransformToText(num));
     }
@@ -87,4 +86,3 @@ public class NumToWord
         return units[num];
     }
 }
-   
