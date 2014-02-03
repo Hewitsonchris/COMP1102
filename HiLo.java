@@ -11,6 +11,7 @@ public class HiLo
       String play;
       
       Scanner scan = new Scanner(System.in);
+      Scanner scanForPlay = new Scanner(System.in);
       Random generator = new Random();
 
       do
@@ -40,8 +41,9 @@ public class HiLo
             }
          }
          while (guess != num && guess > 0);
+        
          System.out.println("Play again (y/n)?: ");
-         play = scan.nextLine(); 
+         play = scanForPlay.nextLine(); 
       }
       while (play.equalsIgnoreCase ("y"));
       System.out.println("Goodbye, thanks for playing.");
