@@ -27,6 +27,7 @@ public static void main(String[] args) throws Exception
         {
             id = myScanner.next();
             score = myScanner.nextInt();
+            String[] bits = line.split("[\\s+]");
             System.out.println("Student " + id + " " + score);
             studentArray[i] = new Student(id, score);
         }
