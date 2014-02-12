@@ -16,19 +16,13 @@ public class Umpire
             return check;
     }
 	
-	/**
-	 * checks whether there is a draw
-	 * @return true if there is a draw, false otherwise
-	 */
+
 	public boolean isDraw() 
 	{
 		return grid.isFull();
 	}
     
-    /**
-     * Checks whether there is a winner in the grid
-     * @return true if there is a winner, false otherwise
-     */ 
+  
     public boolean isWinner()
     {
     	//check for complete rows
@@ -58,7 +52,7 @@ public class Umpire
                     !=grid.getTokenOnSquare(row,col))
     			return false;
     	}
-     	return true;  //only come here if everything the same
+     	return true;  
     }
     
     private boolean isWinnerInCol(int col) 
