@@ -9,7 +9,7 @@ public class Umpire
 	public boolean checkMove(int row, int col) 
     {
         boolean check=true;
-            if (row < 0 || row > Grid.SIZE-1 || col < 0 || col > Grid.SIZE-1) // && row.equals(EMPTY) && col.equals(EMPTY)
+            if (row < 0 || row > Grid.SIZE-1 || col < 0 || col > Grid.SIZE-1) 
             {
                 check= false;
             }
