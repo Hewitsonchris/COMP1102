@@ -25,7 +25,6 @@ public class Histogram
          i = scan.nextInt ();
       }
 
-      // print histogram
       for (b = 0; b < 10; b++)
       {
          System.out.print ((10 * b + 1) + "-");
