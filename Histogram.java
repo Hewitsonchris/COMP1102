@@ -6,31 +6,31 @@ public class Histogram
    {
       
 
-      System.out.println ("Enter some numbers between 0 and 100.");
-      System.out.print ("Signal the end by entering ");
-      System.out.println ("a number out of that range.");
+      System.out.println ("Enter numbers between 0 and 100.");
+      System.out.println ("Quit by entering -1 ");
+      
    }
       
 
     public int populate(int i)
     {
       Scanner scan  = new Scanner (System.in);
-      int[] ranges = new int [10];
-      int box;
+      int[] range = new int [10];
+      int b;
       i = scan.nextInt ();
       while (i >= 1 && i <= 100)
       {
-         box = (i - 1) / 10;
-         ranges[box] ++;
+         b = (i - 1) / 10;
+         range[b] ++;
          i = scan.nextInt ();
       }
 
       // print histogram
-      for (box = 0; box < 10; box++)
+      for (b = 0; b < 10; b++)
       {
-         System.out.print ((10 * box + 1) + "-");
-         System.out.print ((10 * box + 10) + "\t|");
-         for (int count = 0; count < ranges[box]; count++)
+         System.out.print ((10 * b + 1) + "-");
+         System.out.print ((10 * b + 10) + "\t|");
+         for (int count = 0; count < range[b]; count++)
             System.out.print ("*");
          System.out.println ();
       }
